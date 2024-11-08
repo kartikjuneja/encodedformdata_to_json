@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Convert URL-Encoded Form Data to JSON | Online JSON Converter</title>
+  <meta name="description" content="Easily convert URL-encoded form data to JSON format. Perfect for developers and testers working with web data.">
+
+  <title>Form Data to JSON Converter</title>
+  <style>
+    /* General reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Page styling */
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f4f6f9;
+    }
+
+    .container {
+      max-width: 600px;
+      width: 100%;
+      background-color: #ffffff;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    h1 {
+      font-size: 1.5em;
+      color: #333;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      font-weight: bold;
+      color: #555;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    textarea, button {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 6px;
+      border: 1px solid #ddd;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+
+    textarea:focus, button:focus {
+      border-color: #0056b3;
+    }
+
+    button {
+      cursor: pointer;
+      color: #ffffff;
+      background-color: #007bff;
+      border: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .output-container {
+      position: relative;
+      margin-top: 20px;
+    }
+
+    .output {
+      white-space: pre-wrap;
+      font-family: monospace;
+      background-color: #f9f9f9;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      max-height: 300px;
+      overflow: auto;
+      color: #333;
+    }
+
+    .copy-button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px;
+      font-size: 16px;
+      color: #ffffff;
+      background-color: #28a745;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      text-align: center;
+    }
+
+    .copy-button:hover {
+      background-color: #218838;
+    }
+
+    .notification {
+      margin-top: 10px;
+      padding: 10px;
+      font-size: 14px;
+      color: #28a745;
+      display: none;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Convert Form Data to JSON</h1>
+    <form id="dataForm">
+      <div class="form-group">
+        <label for="formData">Paste URL-Encoded Form Data:</label>
+        <textarea id="formData" rows="8" placeholder="Enter form data here..." required></textarea>
+      </div>
+      <button type="submit">Convert to JSON</button>
+    </form>
+
+    <div class="output-container">
+      <div class="output" id="jsonOutput">JSON output will appear here...</div>
+      <button class="copy-button" id="copyButton">Copy JSON</button>
+      <div class="notification" id="notification">JSON copied to clipboard!</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
